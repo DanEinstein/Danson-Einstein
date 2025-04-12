@@ -1,0 +1,345 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color:black;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #181818;
+    color: #e0e0e0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #0a0a0a;
+    color: white;
+    padding: 50px;
+}
+
+/* Profile & Home Content Layout */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 80%;
+    max-width: 1100px;
+}
+
+/* Profile Section */
+.profile {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    flex: 1;
+}
+
+.profile img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid cyan;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile input[type="file"] {
+    display: block;
+    margin: 10px auto;
+    color: white;
+}
+
+/* Home Content Section */
+.home-content {
+    flex: 2;
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+/* Light Mode Service Cards */
+/* Service Section */
+#service {
+    text-align: center;
+    padding: 50px 20px;
+    background: #0a0a0a;
+    color: white;
+}
+
+#service h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Service Gallery */
+.service-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.service {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    text-align: center;
+}
+
+.service img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+
+/* Dark Mode Service Cards */
+body.dark-mode .service-card {
+    background-color: #333;
+    color: #fff;
+}
+
+.portfolio-item {
+    background-color: #f4f4f4;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+body.dark-mode .portfolio-item {
+    background-color: #444;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea, form button {
+    margin-bottom: 15px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #444;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+#img{
+    width:768px;
+    height:auto;
+}
+/* Background Glowing Effect */
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.4), transparent);
+    animation: glow 4s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Form Container */
+.container {
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    z-index: 1;
+}
+
+/* Submit Button */
+button:hover {
+    background: #00ffff;
+    box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan;
+}
+/* Portfolio Section */
+#portfolio {
+    text-align: center;
+    padding: 50px 20px;
+    background: #0a0a0a;
+    color: white;
+}
+
+#portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Portfolio Gallery */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 80px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.project {
+    background: #000000cc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    text-align: center;
+    width:100%;
+    height:auto;
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #bbb;
+}
+#typewriter {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #00FFFF; /* Cursor effect */
+    width: 0;
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+    animation-iteration-count: infinite;
+}
+
+/* Animation for typing */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 20ch; /* Adjust 'ch' based on your text length */
+    }
+}
+
+/* Animation for cursor blinking */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
